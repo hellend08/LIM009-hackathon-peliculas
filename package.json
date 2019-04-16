@@ -17,5 +17,18 @@
   },
   "devDependencies": {
     "jest": "^24.5.0"
-  }
+  },
+  "description": "* [Preámbulo](#preámbulo)\r * [Resumen del proyecto](#resumen-del-proyecto)\r * [Consideraciones generales](#consideraciones-generales)\r * [Objetivos de aprendizaje](#objetivos-de-aprendizaje)\r * [Parte obligatoria](#parte-obligatoria)\r * [Consideraciones técnicas](#consideraciones-técnicas)",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LizRojasEscobar/LIM009-hackathon-peliculas.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/LizRojasEscobar/LIM009-hackathon-peliculas/issues"
+  },
+  "homepage": "https://github.com/LizRojasEscobar/LIM009-hackathon-peliculas#readme"
 }
