@@ -29,10 +29,10 @@ Para organizarnos, realizamos nuestra planeación usando trello. También constr
 
 ## Historias de Usuarios
 
-HU-01: Yo como usuario quiero visualizar todas las películas, con una breve introducción de la página (presentación).
-HU-02: Yo como usuario quiero visualizar todas las películas ordenadas de manera ascendente por nombre(A-Z).
-HU-03 : Yo como usuario quiero filtrar las películas por búsqueda de título.
-HU-04 : Yo como usuario quiero visualizar el ránking más alto y mínimo de la duración de las películas.
+* HU-01: Yo como usuario quiero visualizar todas las películas, con una breve introducción de la página (presentación).
+* HU-02: Yo como usuario quiero visualizar todas las películas ordenadas de manera ascendente por nombre(A-Z).
+* HU-03 : Yo como usuario quiero filtrar las películas por búsqueda de título.
+* HU-04 : Yo como usuario quiero visualizar el ránking más alto y mínimo de la duración de las películas.
 
 ***
 
@@ -55,7 +55,7 @@ Decidimos realizar dos encuestas.
 
 Como conclusión de esta primera encuesta, pudimos observar que:
 
-El rando de edad de la mayría de personas encuestadas se encontraba entre 25 - 35 años. 
+El rango de edad de la mayoría de personas encuestadas se encontraba entre 25 - 35 años. 
 De las 27 personas encuestadas, el 85% (23) sí usa una plataforma online para ver películas.
 Cómo filtran la información:
 La forma más importante de hacerlo fue género y título de la película.
@@ -83,16 +83,27 @@ Es factible realizar una página que sólo reúna películas del género comedia
 
 # 1. Nuestros Usuarios
 
+## ¿Quiénes son los principales usuarios de nuestro producto?
 
+Nuestro público objetivo principal son personas de 25 a 35 años. Que se encuentran trabajando. Son personas que se mantienen ocupadas y en su tiempo libre deciden ver una comedia para entretenerse, para sentirse mejor, ya que su estado de ánimo es un factor importante para decidir qué quieren ver.
 
+## ¿Cómo crees que el producto que estás creando está resolviendo sus problemas?
+
+Porque sabemos que el estado emocional es un factor importante para ellos, decidimos crear una plataforma que sólo muestre una selección de películas del género comedia. Con esto queremos que nuestro público tenga un lugar al cual acudir para sentirse bien, para entretenerse, para compartir en familia o con amigos. 
 
 ***
 
-# PROTOTIPADO
+# PROTOTIPADO 
 
 ## Prototipo de Alta Fidelidad
 
+* En Marvel
+
 https://marvelapp.com/1ef7fi86
+
+![investigación](src/img/pagina-uno.png)
+
+
 
 
 
