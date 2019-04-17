@@ -8,6 +8,7 @@ const getPosts = () => {
     .then((res) => res.json())
     .then((data) => {
       allMovies(data.Search);
+      sortDataTotal(data);
     });
 };
 getPosts();
@@ -50,4 +51,24 @@ const filterByTitle = (title) => {
       return filterOutputMovies.innerHTML = string;
     });
 };
-filterByTitle('nadia'); 
+filterByTitle('terror'); 
+
+const sortDataTotal = (data) => {
+  const compareSortData = (elemA, elemB) => {
+    if (elemA.name > elemB.name)
+      return 1;
+    if (elemA.name < elemB.name)
+      return -1;
+    return 0;
+  };
+  const sortBy = 'Za'
+  const sortData = (data, sortBy) => {
+    let sortedData = data.sort(compareSortData);
+    if (sortBy === "Az") {
+      return sortedData;
+    } else if (sortBy === "Za") {
+      return sortedData.reverse();
+    }
+    return data;
+  }
+}
