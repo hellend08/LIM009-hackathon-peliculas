@@ -1,35 +1,8 @@
-// document.getElementById('getPosts').addEventListener('click', getPosts);
-const cardsContainer = document.getElementById('cards');
 const filterOutputMovies = document.getElementById('output');
-
-
-const getPosts = () => {
-  fetch('http://www.omdbapi.com/?s=drama&&apikey=ee879aa1')
-    .then((res) => res.json())
-    .then((data) => {
-      allMovies(data.Search);
-    });
-};
-getPosts();
-
-const allMovies = (data) => {
-  const displayCards = (data) => { /* mostrar los datos  en pantalla*/
-    let output = '<h2>Posts</h2>';
-    data.forEach(post => {
-      output += `
-      <div >
-        <h3>${post.Title}</h3>
-        <img src="${post.Poster}" alt="imagen de ${post.Title}">
-        <p>Type : ${post.Type}</p>   
-        <p>Year : ${post.Year}</p>         
-      </div>
-    `;
-    });
-    return cardsContainer.innerHTML = output;
-  };
-  displayCards(data);  
-};
-
+const imputTitle = document.getElementById('title');
+const imputTitle2 = document.getElementById('title2');
+const search = document.getElementById('search');
+const search2 = document.getElementById('search2');
 
 const filterByTitle = (title) => {
   fetch(`https://www.omdbapi.com/?s=${title}&apikey=ea8492c7 `) 
@@ -39,15 +12,47 @@ const filterByTitle = (title) => {
       let string = ' ';
       data.Search.forEach(post => {
         string += `
-          <div >
-            <h3>${post.Title}</h3>
-            <img src="${post.Poster}" alt="imagen de ${post.Title}">
-            <p>Tipo : ${post.Type}</p>   
-            <p>Año : ${post.Year}</p>   
+          <div class = "card"  >
+            <p>${post.Title}</p>
+            <img src="${post.Poster}" alt="image of ${post.Title}">
+            <p>Type : ${post.Type}</p>   
+            <p>Year : ${post.Year}</p>   
           </div>
         `;
       });
       return filterOutputMovies.innerHTML = string;
     });
 };
-filterByTitle('nadia'); 
+search.addEventListener('click', () => {  
+  filterByTitle(imputTitle.value);
+  
+});
+
+const allData = (title) => {
+  fetch(`https://www.omdbapi.com/?t=${title}&apikey=ea8492c7 `) 
+    .then(resp => 
+      resp.json())
+    .then((data) => {
+      let string = ' ';      
+      string += `
+          <div class = "card"  >
+            <p>${data.Title}</p>
+            <img src="${data.Poster}" alt="imagen de ${data.Title}">
+            <p>Type : ${data.Type}</p>   
+            <p>Director : ${data.Director}</p>  
+            <p>Gender : ${data.Genre}</p> 
+            <Actors : ${data.Actors}</p>
+            <p>Synopsis : ${data.Plot}</p> 
+            <p>Runtime : ${data.Runtime}</p> 
+
+            
+          </div>
+        `;
+     
+      return filterOutputMovies.innerHTML = string;
+    });
+};
+search2.addEventListener('click', () => {  
+  allData(imputTitle2.value);
+});
+

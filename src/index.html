@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Título</title>
-    <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Affordable and professional web design">
+	  <meta name="keywords" content="web design, affordable web design, professional web design">
+  	<meta name="author" content="Brad Traversy">
+    <title>Pelis | Welcome</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <h1>Título</h1>
-      <input type="Text" name="filtro"></input>
-      <input type="button" value="A - Z" id="AzButton">
-      <input type="button" value="Z - A" id="ZaButton">
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">...</span></h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li>About</li>
+            <li>Services</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-<div id="cards"></div>
-  <div id="output"></div>
-</div>
+
+    <section id="showcase">
+      <div class="container">
+        <h1>Find all the movies you want to see</h1>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <div class="container">
+        <h1>Search your movies</h1>
+        <form>
+          <input type="Text" placeholder="Search your Movie..." id ="title"></input>
+          <input type="Text" placeholder="Search your Movie..." id ="title2"></input>
+          <input type="button" class="button_1" id="search" value="Buscar"  ></input>
+          <input type="button" class="button_1" id="search2" value="Buscar"  ></input>
+          <a href="#boxes" class="button_1"></a>
+        </form>
+      </div>
+    </section>
+   
+    <section id="boxes">
+      <div class="container">
+        <div class="box"></div>
+          <div id="output" ></div>
+          <div id="output-all" ></div>
+        </div>
+    </section>
+  
+
+    <footer>
+      <p>L&H, Copyright</p>
+    </footer>
     <script src="data.js"></script>
     <script src="main.js"></script>
   </body>
