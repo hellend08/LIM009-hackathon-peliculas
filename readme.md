@@ -3,94 +3,96 @@
 ## Índice
 
 * [Preámbulo](#preámbulo)
-* [Resumen del proyecto](#resumen-del-proyecto)
-* [Consideraciones generales](#consideraciones-generales)
-* [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-* [Parte obligatoria](#parte-obligatoria)
-* [Consideraciones técnicas](#consideraciones-técnicas)
+* [Planeamiento](#planeamiento)
+* [Investigación](#investigación)
+* [Prototipado](#prototipado)
 
  ***
+# HACKATHON PELÍCULAS
 
-## Preámbulo
+# PREÁMBULO
 
 Con la aparición de plataformas para ver películas en la nube, como Netflix o
 Hulu, ver películas desde donde estés, comiendo lo que quieras
 (sin tener que pagar precios ridículos por pop-corn / pipoca / palomitas /
-canchita / cabritas), parando si es necesario, teniendo acceso a una cantidad
+canchita / cabritas), parado si es necesario, teniendo acceso a una cantidad
 abrumadora de películas... ha cambiado la experiencia del usuario
-y modificado el mercado de las películas a nivel global.
+y modificado el mercado de las películas a nivel global. 
 
- ![Pelis](https://media.giphy.com/media/NipFetnQOuKhW/giphy.gif)
+***
 
-## Resumen del proyecto
+# PLANEAMIENTO
 
-Durante estos días crearás el producto que tú quieras alrededor del mundo
-de las películas. Puede ser un sitio que hable de las mejores películas
-latinoamericanas, uno que recomiende las películas recién estrenadas en Netflix,
-uno de pelis de terror... o... ¡lo que quieras!
+Para organizarnos, realizamos nuestra planeación usando trello. También construimos las Historias de Usuarios.
 
-## Consideraciones generales
+![planeamiento](src/img/trello.PNG)
 
-* Este proyecto se debe resolver en equipos de hasta 4 personas.
-* Usa la API de [OMDB](http://www.omdbapi.com/) (The Open Movie Database).
-* Tiempo para completar el reto: 3 días.
-* Habrán dos presentaciones, una a la mitad de la _hackathon_ y otra al final.
+## Historias de Usuarios
 
-## Objetivos de aprendizaje
+HU-01: Yo como usuario quiero visualizar todas las películas, con una breve introducción de la página (presentación).
+HU-02: Yo como usuario quiero visualizar todas las películas ordenadas de manera ascendente por nombre(A-Z).
+HU-03 : Yo como usuario quiero filtrar las películas por búsqueda de título.
+HU-04 : Yo como usuario quiero visualizar el ránking más alto y mínimo de la duración de las películas.
 
-* Enfrentarte a un reto de corta duración en el que pongas en práctica todo
-lo aprendido hasta ahora.
-* Que sigas desarrollando tus habilidades de trabajo en equipo. Mientras más
-personas en un equipo de trabajo, mayor complejidad para: tener un entendimiento
-común, seguir el flujo de trabajo, buscar consensos, etc.
+***
 
-## Parte Obligatoria
+# INVESTIGACIÓN
 
-* Todo el planeamiento del trabajo deberá ser detallado en un repositorio único
-por _squad_ en el que se presente el _planning_, el _research_, los _sketches_
-y las inspiraciones utilizadas para definir el producto.
-* Además, deberás detallar en el archivo _readme_, qué hizo cada una en el
-proyecto.
-* El producto deberá presentarse publicado en github pages.
+# 1. Encuestas
 
-## Consideraciones técnicas
+Decidimos realizar dos encuestas.
 
-* El diseño visual de los componentes es de libre elección de las estudiantes,
-sin embargo, si no quieren crearlo desde cero, pueden utilizar el que
-propuso [Walmart](https://drive.google.com/file/d/0B6GBtl-gO6LwaVprQkFqTGI2a28/view).
-* Deberán usar al menos un framework de css.
+## Primera Encuesta
 
-## Reglas de las presentaciones 
+1. Nuestra primera encuesta reúne información sobre la edad del público, el uso de plataformas online y las preferencias sobre géneros.
 
-* Cada squad tendrá 5 minutos para presentar su demo y 5 minutos para recibir preguntas.
+![investigación](src/img/edad.PNG)
+![investigación](src/img/uso-de-plataformas.PNG)
+![investigación](src/img/como-filtrar.PNG)
+![investigación](src/img/generos.PNG)
+![investigación](src/img/ordenar-info.PNG)
+![investigación](src/img/info-relevante.PNG)
 
-* Las personas que presentan en la primera presentación no deben ser las mismas de la presentación final.
+Como conclusión de esta primera encuesta, pudimos observar que:
 
-## Horario
+El rando de edad de la mayría de personas encuestadas se encontraba entre 25 - 35 años. 
+De las 27 personas encuestadas, el 85% (23) sí usa una plataforma online para ver películas.
+Cómo filtran la información:
+La forma más importante de hacerlo fue género y título de la película.
+Entre los géneros más buscados, encontramos:
+Comedia, Ciencia ficción, drama y suspenso
+La mayoría de las personas encuestadas prefiere filtrar la información por el título de la película.
+Información relevante que buscan conocer de una película:
+Sinopsis, Elenco de actores y en menor medida la duración, el año de lanzamiento y el director.
 
-|       |  Lunes            | Martes                       | Miércoles                     | 
-|------ | ------------------| ---------------------------- | ----------------------------- | 
-| 8:00  | Kick off hackaton | Daily por squad              |   Hackeo                      |      
-| 9:00  | Sesión de planificación  | Hackeo                |   Detalles finales            | 
-| 10:00 | Hackeo            | Compartir link de aplicación | Feria de demostraciones       |
-| 11:00 |                   | Presentación y Feedback      | Presentación de mejores squads|    
-| 12:00 |                   |                              |     Deliberación del jurado   |                                
-|>13:00 |                   |                              |                               |                                
-| 20:00 |                   |                              |                               |                       
+## Segunda Encuesta
 
-## Tips para la organización de trabajo entre UX y Front end 
+Con los resultados obtenidos en la primera encuesta, decidimos crear una página que solo mostrara películas del género comedia, ya que un buen porcentaje de nuestros usuarios prefería este género.
 
-* Las UX y FE entienden en conjunto el reto en el que van a trabajar, se organizan y arman sus primeros bocetos.
-* Con los primeros bocetos/ideas, las FE pasan a crear su ambiente de desarrollo y a crear componentes atómicos que luego les sea fácil personalizar con CSS y utilizar para crear interfaces más complejas. Además, las FE empiezan también a trabajar en la lógica de la aplicación. Mientras tanto, las UX crean una guía de estilos, los flujos de usuarios, hacen un prototipo más completo y lo testean.
-* Las UX comparten el prototipo testeado, para que el equipo empiece a personalizar los componentes y a ponerlos en conjunto.
-* Las UX hacen QA y testing con los releases que vayan haciendo las FE.
-* Planifiquen, historias de usuario y definition of done son importantísimos.
-* Usen las ceremonias ágiles para saber en que van como equipo, dailys y retrospectivas diarias son esenciales.
-* Iteren, iteren, iteren.
+![investigación](src/img/seleccion-comedias.PNG)
+![investigación](src/img/tiempo-ver.PNG)
+![investigación](src/img/ver-pelis.PNG)
+![investigación](src/img/emociones.PNG)
+![investigación](src/img/sentir-bien.PNG)
 
-## ¿Qué es la Feria de demos?
+Como resultado de esta segunda encuesta, pudimos concluir que:
 
-La feria de demos se realizará el día de las presentaciones, consiste en la dinámica de “speed dating”, cada squad presentará su demo durante 3 minutos a un grupo de personas, entre ellos los jurados de la Hackathon. Luego de los 3 minutos sonará una chicharra y el grupo de personas rotará al siguiente squad, de esta forma deberán presentar durante una hora. 
+Es factible realizar una página que sólo reúna películas del género comedia. Y que nuestros usuarios eligen ver este género para entretenerse o cambiar de humor, ya que sus emociones influyen mucho al momento de realizar su elección.
 
-* Las demos no deben durar más de 3 minutos y deben mostrar el producto y las tecnologías usadas.
-* Los asistentes van a votar por los 5 equipos finalistas, quienes tendrán la oportunidad de hacer su demo a todo el público para poder elegir un ganador. 
+***
+
+# 1. Nuestros Usuarios
+
+
+
+
+***
+
+# PROTOTIPADO
+
+## Prototipo de Alta Fidelidad
+
+https://marvelapp.com/1ef7fi86
+
+
+
