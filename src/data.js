@@ -4,10 +4,10 @@
 
 // window.sorData = sorData; 
 
-  const compareSortData = (elemA, elemB) => {
-    if (elemA.Title > elemB.Title)
+  const compareSortData = (A, B) => {
+    if (A.Title > B.Title)
       return 1;
-    if (elemA.Title < elemB.Title)
+    if (A.Title < B.Title)
       return -1;
     return 0;
   };

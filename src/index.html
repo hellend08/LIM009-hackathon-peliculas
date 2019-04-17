@@ -3,19 +3,33 @@
   <head>
     <title>Título</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.min.css" rel="stylesheet"/>
     <link href="style.css" rel="stylesheet"/>
+    
   </head>
   <body>
+
+
+    
     <header>
       <h1>Título</h1>
-      <input  id="text" type="Text" name="filtro"></input>
-      <button id="send">BUSCAR</button>
-      <button  id="AzButton">A - Z</button>
-      <button  id="ZaButton">Z - A</button>
+      <input class="form-control" id="text" type="Text" name="filtro"></input>
+      <button class="btn btn-success" id="send">BUSCAR</button>
+      <br></br>
+      <button class="btn btn-warning" id="AzButton">A - Z</button>
+      <button class="btn btn-warning" id="ZaButton">Z - A</button>
     </header>
     <div id="cards"></div>
-    <div id="output"></div>
+    <div  class="row" id="output"></div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+    crossorigin="anonymous"></script>
+      <script src="bootstrap.min.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
+
   </body>
 </html>
