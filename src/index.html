@@ -1,78 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Título</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Affordable and professional web design">
-	  <meta name="keywords" content="web design, affordable web design, professional web design">
-    <meta name="author" content="Brad Traversy">
-    <link href="bootstrap.min.css" rel="stylesheet"/>
-    <link href="style.css" rel="stylesheet"/>
-    <title>Pelis | Welcome</title>
-  </head>
-  <body>
 
+<head>
+  <title>Movies | Welcome</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="bootstrap.min.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Be Happy, Be Movies.</h1>
+    <nav>
+      <ul>
+        <li class="current"><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <section>
+    <h4>Busca tu película según su titulo:</h4>
+    <input type="Text" placeholder="Search your Movie..." id="title"></input>
+    <input type="button" class="button_1" id="search" value="Buscar"></input>
+  </section>
+  <h4>Synopsis según el título de tu película:</h4>
+  <input type="Text" placeholder="Search your Movie..." id="title2"></input>
+  <input type="button" class="button_1" id="search2" value="Buscar"></input>
+  <article>
+    <p>Aquí puedes ordenar según el título de la película, para una búsqueda más sencilla</p>
+    <button class="btn btn-warning" id="AzButton">A - Z</button>
+    <button class="btn btn-warning" id="ZaButton">Z - A</button>
+  </article>
+  <div id="output"></div>
 
-    
-    <header>
-      <!-- <input class="form-control" id="text" type="Text" name="filtro"></input>
-      <button class="btn btn-success" id="send">BUSCAR</button>
-    </header>
-    <div id="cards"></div>
-    <div  class="row" id="output"></div> -->
-
-      <div class="container">
-        <div id="branding">
-          <h1><span class="highlight">...</span></h1>
-        </div>
-        <nav>
-          <ul>
-            <li class="current"><a href="index.html">Home</a></li>
-            <li>About</li>
-            <li>Services</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <section id="showcase">
-      <div class="container">
-        <h1>Find all the movies you want to see</h1>
-      </div>
-    </section>
-
-    <section id="newsletter">
-      <div class="container">
-        <h1>Search your movies</h1>
-        <form>
-          <input type="Text" placeholder="Search your Movie..." id ="title"></input>
-          <input type="Text" placeholder="Search your Movie..." id ="title2"></input>
-          <input type="button" class="button_1" id="search" value="Buscar"  ></input>
-          <input type="button" class="button_1" id="search2" value="Buscar"  ></input>
-          <button class="btn btn-warning" id="AzButton">A - Z</button>
-          <button class="btn btn-warning" id="ZaButton">Z - A</button>
-          <a href="#boxes" class="button_1"></a>
-        </form>
-      </div>
-    </section>
-   
-    <section id="boxes">
-      <div class="container">
-        <div class="box"></div>
-          <div id="output" ></div>
-          <div id="output-all" ></div>
-        </div>
-    </section>
-  
-
-    <footer>
-      <p>L&H, Copyright</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-    <script src="bootstrap.min.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-
-  </body>
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
 </html>
