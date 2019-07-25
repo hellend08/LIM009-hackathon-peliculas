@@ -36,12 +36,12 @@ filterByTitle('love');
 search.addEventListener('click', () => {  
   filterByTitle(imputTitle.value);
 });
-      // string += `
-        //   <div class="col-12 col-md-4">
-        //     <h3>${post.Title}</h3>
-        //     <img src="${post.Poster}" alt="imagen de ${post.Title}">
-        //     <p>Tipo : ${post.Type}</p>   
-        //     <p>Año : ${post.Year}</p>  
+//       string += `
+//           <div class="col-12 col-md-4">
+//             <h3>${post.Title}</h3>
+//             <img src="${post.Poster}" alt="imagen de ${post.Title}">
+//             <p>Tipo : ${post.Type}</p>   
+//             <p>Año : ${post.Year}</p>  
 // filterByTitle('Comedy');
 
 // buscarMovies.addEventListener("click", () => {
