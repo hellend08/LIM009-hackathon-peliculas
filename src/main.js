@@ -1,9 +1,6 @@
-// const cardsContainer = document.getElementById('cards');
 const filterOutputMovies = document.getElementById('output');
 const botonAZ = document.getElementById("AzButton");
 const botonZA = document.getElementById("ZaButton");
-// const buscarMovies = document.getElementById("send");
-// const textoMovies = document.getElementById("text");
 const imputTitle = document.getElementById('title');
 const imputTitle2 = document.getElementById('title2');
 const search = document.getElementById('search');
@@ -15,25 +12,30 @@ const filterByTitle = (title) => {
     .then(resp => 
       resp.json())
     .then((data) => {
-      let string = ' ';
+      let string = '';
       let newArray = data.Search;
       newArray.forEach(post => {
         filterOutputMovies.innerHTML = '';
         string += `
-          <div class="col-12 col-md-4" >
-            <p>${post.Title}</p>
-            <img src="${post.Poster}" alt="image of ${post.Title}">
+          <div class="col-4 col-md-4" >
+          <section class="movies">
+            <h5>${post.Title}</h5>
+            <img class="poster" src="${post.Poster}" alt="image of ${post.Title}">
             <p>Type : ${post.Type}</p>   
-            <p>Year : ${post.Year}</p>   
+            <p>Year : ${post.Year}</p>
+            </section>
           </div>
         `;
       });
       filterOutputMovies.innerHTML = string;
     });
 };
-filterByTitle('love');
+filterByTitle('action');
 
-search.addEventListener('click', () => {  
+const shareMovie = document.getElementById('share-movie');
+
+search.addEventListener('click', () => {
+   
   filterByTitle(imputTitle.value);
 });
 //       string += `
@@ -49,39 +51,41 @@ search.addEventListener('click', () => {
 //   let valueImput = textoMovies.value
 //   filterByTitle(valueImput); 
 // })
-botonAZ.addEventListener("click", () => {
-  filterOutputMovies.innerHTML = '';
-  let string = ' ';
-  let sort = sortData(newArray,"Az");
-  sort.forEach(post => {
-    string += `
-      <div>
-        <h3>${post.Title}</h3>
-        <img src="${post.Poster}" alt="imagen de ${post.Title}">
-        <p>Tipo : ${post.Type}</p>   
-        <p>Año : ${post.Year}</p>   
-      </div>
-    `; 
-  });
-  filterOutputMovies.innerHTML = string;
-});
 
-botonZA.addEventListener("click", () => {
-  filterOutputMovies.innerHTML = '';
-  let string = ' ';
-  let sortTwo = sortData(newArray,"Za");
-  sortTwo.forEach(post => {
-    string += `
-      <div>
-        <h3>${post.Title}</h3>
-        <img src="${post.Poster}" alt="imagen de ${post.Title}">
-        <p>Tipo : ${post.Type}</p>   
-        <p>Año : ${post.Year}</p>   
-      </div>
-    `;
-  });
-  filterOutputMovies.innerHTML = string;
-})
+
+// botonAZ.addEventListener("click", () => {
+//   filterOutputMovies.innerHTML = '';
+//   let string = ' ';
+//   let sort = sortData(newArray,"Az");
+//   sort.forEach(post => {
+//     string += `
+//       <div>
+//         <h3>${post.Title}</h3>
+//         <img src="${post.Poster}" alt="imagen de ${post.Title}">
+//         <p>Tipo : ${post.Type}</p>   
+//         <p>Año : ${post.Year}</p>   
+//       </div>
+//     `; 
+//   });
+//   filterOutputMovies.innerHTML = string;
+// });
+
+// botonZA.addEventListener("click", () => {
+//   filterOutputMovies.innerHTML = '';
+//   let string = ' ';
+//   let sortTwo = sortData(newArray,"Za");
+//   sortTwo.forEach(post => {
+//     string += `
+//       <div>
+//         <h3>${post.Title}</h3>
+//         <img src="${post.Poster}" alt="imagen de ${post.Title}">
+//         <p>Tipo : ${post.Type}</p>   
+//         <p>Año : ${post.Year}</p>   
+//       </div>
+//     `;
+//   });
+//   filterOutputMovies.innerHTML = string;
+// })
 
 
 

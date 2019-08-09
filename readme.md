@@ -1,11 +1,12 @@
-# "Hackathon" de final de _Common Core_, películas
+# "Hackathon" de final de _Common Core_.
 
-## Índice
+## Indice
 
 * [Preámbulo](#preámbulo)
 * [Planeamiento](#planeamiento)
-* [Investigación](#investigación)
-* [Prototipado](#prototipado)
+* [Testing](#testing)
+* [Prototipo](#prototipo)
+* [Conclusión](#conclusión)
 
  ***
 # HACKATHON PELÍCULAS

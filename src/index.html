@@ -1,42 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>Movies | Welcome</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="bootstrap.min.css" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet"></link>
+  <link href="../bootstrap/bootstrap.min.css" rel="stylesheet"></link>
 </head>
 <body>
   <header>
-    <h1>Be Happy, Be Movies.</h1>
-    <nav class="">
+    <nav class="nav">
       <ul>
+        <li>
+          <h2>Be Happy, Be Movies.</h2>
+        </li>
         <li class="current"><a href="index.html">Home</a></li>
+        <li class="current"><a href="#share">Share</a></li>
+        <li class="current"><a href="#output">All Movies</a></li>
       </ul>
     </nav>
   </header>
-  <br>
-  <section class="">
-    <h4 class="">Busca tu película según su titulo:</h4>
-    <input type="Text" placeholder="Search your Movie..." id="title"></input>
+  <div> <img class="filmes" src="./img/filmes.jpg" alt="logo">
+  </div>
+  <section id="share" class="filter">
+    <div class="filter-tittle">
+      <!-- <p>Tendrás una busqueda completa de distintas películas filtradas por alguna palabra del título de la película.</p> -->
+    <h3 class="">Busca tu película según su título:</h3>
+    <input type="Text" class="input" placeholder="Search your Movie..." id="title"></input>
     <input type="button" class="button_1" id="search" value="Buscar"></input>
+    <div id="share-movie"></div>
+  </div>
+  <div class="filter-tittle">
+    <h3>Synopsis según el título de tu película:</h3>
+    <input type="Text" class="input" placeholder="Write tittle movie..." id="title2"></input>
+    <input type="button" class="button_1" id="search2" value="Buscar"></input>
+    <div id="write-tittle"></div>
+  </div>
+    <!-- <article>
+      <h5>Ordena por título, para una búsqueda más sencilla.</h5>
+      <button class="btn btn-warning" id="AzButton">A - Z</button>
+      <button class="btn btn-warning" id="ZaButton">Z - A</button>
+    </article> -->
   </section>
-  <h4>Synopsis según el título de tu película:</h4>
-  <input type="Text" placeholder="Search your Movie..." id="title2"></input>
-  <input type="button" class="button_1" id="search2" value="Buscar"></input>
-  <article>
-    <p>Aquí puedes ordenar según el título de la película, para una búsqueda más sencilla</p>
-    <button class="btn btn-warning" id="AzButton">A - Z</button>
-    <button class="btn btn-warning" id="ZaButton">Z - A</button>
-  </article>
-  <div id="output"></div>
+  <!-- <span class="direction-left"><img class="button-left" src="./img/play-button.png"></span> -->
+  <div class="container" id="output">
+  </div>
+  
+  <footer>
+    <ul class="copyright">
+      <li>&copy; Untitled. All rights reserved.</li>
+      <!-- <li>GitHub: 
+        <a target="blank" href="https://hellend08.github.io/LIM009-hackathon-peliculas/">MoviesLife</a>
+      </li> -->
+      <li>
+        <a href="index.html">MoviesLife</a>
+      </li>
+    </ul>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.4.0.min.js"
     integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-  <script src="bootstrap.min.js"></script>
+  <script src="../bootstrap/bootstrap.min.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>
